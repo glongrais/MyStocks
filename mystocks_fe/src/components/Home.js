@@ -30,7 +30,7 @@ class Home extends Component {
         <Row>
           <Col>
             <StockList
-              students={this.state.stocks}
+              stocks={this.state.stocks}
               resetState={this.resetState}
             />
           </Col>
