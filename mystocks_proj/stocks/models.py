@@ -1,7 +1,7 @@
 from django.db import models
 
 class Stock(models.Model):
-    symbol = models.CharField("Symbol", max_length=20, primary_key=True)
+    symbol = models.CharField("Symbol", max_length=20)
     name = models.CharField("Name", max_length=240)
     currentPrice = models.FloatField("CurrentPrice")
     previousClose = models.FloatField("PreviousClose")
