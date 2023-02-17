@@ -7,7 +7,7 @@ import { API_URL } from "../constants";
 
 class NewStockForm extends React.Component {
   state = {
-    pk: "",
+    pk: 0,
     symbol: "",
     name: "",
     currentPrice: 0,

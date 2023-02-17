@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <div className="text-center">
         <img
-          src="https://logrocket-assets.io/img/logo.png"
+          src="https://imageio.forbes.com/specials-images/imageserve/6354154d5e097d68cc4360ba/Picture-shows-green-graph-line-in-front-of-quotation-board/960x0.jpg?format=jpg&width=960"
           width="300"
           className="img-thumbnail"
           style={{ marginTop: "20px" }}
