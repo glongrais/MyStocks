@@ -13,11 +13,9 @@ class StockList extends Component {
           <tr>
             <th>Symbol</th>
             <th>Name</th>
+            <th>Quantity</th>
             <th>Current Price</th>
-            <th>Previous Close</th>
-            <th>Sector</th>
-            <th>Dividend Yield</th>
-            <th>Logo URL</th>
+            <th>Purchased Price</th>
             <th></th>
           </tr>
         </thead>
@@ -30,14 +28,12 @@ class StockList extends Component {
             </tr>
           ) : (
             stocks.map(stock => (
-              <tr key={stock.pk}>
-                <td>{stock.symbol}</td>
-                <td>{stock.name}</td>
-                <td>{stock.currentPrice}</td>
-                <td>{stock.previousClose}</td>
-                <td>{stock.sector}</td>
-                <td>{stock.dividendYield}</td>
-                <td>{stock.logoUrl}</td>
+              <tr key={stock.id}>
+                <td>{stock.stock.symbol}</td>
+                <td>{stock.stock.name}</td>
+                <td>{stock.shares}</td>
+                <td>{stock.stock.currentPrice}</td>
+                <td>{stock.purchasePrice}</td>
                 <td align="center">
                   <NewStockModal
                     create={false}
@@ -46,7 +42,7 @@ class StockList extends Component {
                   />
                   &nbsp;&nbsp;
                   <ConfirmRemovalModal
-                    pk={stock.pk}
+                    pk={stock.id}
                     resetState={this.props.resetState}
                   />
                 </td>
