@@ -1,3 +1,4 @@
 /django-react
 mystocks_proj/mystocks_proj/SECRET/*
 mystocks_proj/db.sqlite3
+mystocks_proj/stocks/__pycache__/*
