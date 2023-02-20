@@ -1,5 +1,7 @@
 /django-react
 mystocks_proj/mystocks_proj/SECRET/*
 mystocks_proj/db.sqlite3
+mystocks_proj/mystocks_proj/__pycache__/*
 mystocks_proj/stocks/__pycache__/*
-mystocks_proj/__pycache__/*
+mystocks_proj/stocks/migrations/__pycache__/*
+.DS_Store
