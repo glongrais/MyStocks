@@ -11,10 +11,6 @@ class Header extends Component {
           style={{ marginTop: "20px" }}
         />
         <hr />
-        <h5>
-          <i>presents</i>
-        </h5>
-        <h1>App with React + Django</h1>
       </div>
     );
   }

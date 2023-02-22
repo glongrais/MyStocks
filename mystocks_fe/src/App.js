@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import Header from "./components/Header";
+import Header from "./scenes/global/Header";
 import Home from "./components/Home";
 
 function App() {
