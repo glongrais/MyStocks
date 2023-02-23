@@ -20,3 +20,19 @@ class StockHolding(models.Model):
 
     def __str__(self):
         return self.stock.name
+    
+class Transaction(models.Model):
+
+    class transactionType(models.TextChoices):
+        BUY = 'BUY'
+        SELL = 'SELL'
+        DIVIDEND = 'DIVIDEND'
+
+    stock = models.ForeignKey(Stock, on_delete=models.CASCADE)
+    type = models.CharField(max_length=10,choices=transactionType.choices,default=transactionType.BUY)
+    shares = models.PositiveIntegerField()
+    pricePerShare = models.DecimalField(max_digits=10, decimal_places=2)
+    priceTotal = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.stock.name
