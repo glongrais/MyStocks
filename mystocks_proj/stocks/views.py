@@ -39,3 +39,12 @@ def stocks_detail(request, pk):
     elif request.method == 'DELETE':
         stock.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+@api_view(['GET', 'POST'])
+def transactions_list(request):
+    if request.method == 'GET':
+        data = Transaction.objects.select_related('stock').all()
+
+        serializer = TransactionSerializer(data, context={'request': request}, many=True)
+
+        return Response(serializer.data)

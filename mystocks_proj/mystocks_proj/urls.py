@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^api/stocks/$', views.stocks_list),
     re_path(r'^api/stocks/([0-9])$', views.stocks_detail),
+    re_path(r'^api/transactions/$', views.transactions_list),
 ]
